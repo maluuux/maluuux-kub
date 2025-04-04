@@ -18,6 +18,12 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 chmod +x ccminer start.sh
 ```
+คำสั่ง Autorun
+```nano ~/.bashrc
+```
+```
+   bash ~/myscript.sh
+
 1. Edit your pools, address, worker name:
 - Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
 - Address & worker name is near the bottom of the config.json in format `address here.worker name here`
