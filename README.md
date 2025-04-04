@@ -28,7 +28,13 @@ bash ~/ccminer/start.sh
 ```
 กด CTRL+O ENTER และกด CTRL+O เพื่อออก
 
-1. Edit your pools, address, worker name:
+
+
+
+
+
+
+1.Edit your pools, address, worker name:
 - Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
 - Address & worker name is near the bottom of the config.json in format `address here.worker name here`
 - Optionally can use ccminer api for monitoring
