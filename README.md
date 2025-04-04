@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 chmod +x ccminer start.sh
 ```
-คำสั่ง Autorun
+# คำสั่ง Autorun
 ```
 nano ~/.bashrc
 ```
