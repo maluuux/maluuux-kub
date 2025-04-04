@@ -26,7 +26,8 @@ nano ~/.bashrc
 ```
 bash ~/ccminer/start.sh
 ```
-กด CTRL+O ENTER และกด CTRL+O เพื่อออก
+-กด CTRL+O ENTER เพื่อบันทึก
+-กด CTRL+X เพื่อออก
 
 # คำสั่ง
 
@@ -37,11 +38,11 @@ bash ~/ccminer/start.sh
 ```
 nano config.json
 ```
-2. Start ccminer with:
+2. Start โปรแกรม:
 ```
 ~/ccminer/start.sh
 ```
-3. Close ccminer with:
+3. หยุดโปรแกรม :
 ```
 CTRL + c
 ```
