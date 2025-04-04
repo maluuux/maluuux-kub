@@ -18,24 +18,22 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 chmod +x ccminer start.sh
 ```
-# การใช้:
-
-แก้ไขพูล ที่อยู่ ชื่อผู้ปฏิบัติงาน:
-- พูลใช้คุณลักษณะดังนั้น = ปิด (ไม่ได้ใช้) ในขณะที่ = เปิด (จะใช้พูลนี้)"disabled"10
-- ที่อยู่และชื่อคนงานอยู่ใกล้ด้านล่างของ config.json ในรูปแบบ `address here.worker name here`
-- เลือกใช้ ccminer api สําหรับการตรวจสอบ
+1. Edit your pools, address, worker name:
+- Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
+- Address & worker name is near the bottom of the config.json in format `address here.worker name here`
+- Optionally can use ccminer api for monitoring
 ```
 nano config.json
 ```
-2. เริ่ม ccminer ด้วย:
+2. Start ccminer with:
 ```
 ~/ccminer/start.sh
 ```
-3. ปิด ccminer ด้วย:
+3. Close ccminer with:
 ```
 CTRL + c
 ```
-# เคล็ดลับและเทคนิค:
+# Tips & Tricks:
 - If Termux can't complete update & upgrade please clear app cache and data.
 - Disable battery manager, battery optimization for Termux app.
 - If you have a "protect battery" option to stop charge at 85% or similar enable it to help preserve battery health.
