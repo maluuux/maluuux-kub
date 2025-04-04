@@ -1,16 +1,16 @@
-# Installation:
-1. Download & install latest arm64-v8a [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk):
+# การติดตั้ง:
+1. ดาวน์โหลดและติดตั้ง arm64-v8a [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk):
 ```
 https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk
 ```
-2. Get Termux ready:
-- Type `y` then enter key in any prompts!
+2. เตรียม Termux ให้พร้อม:
+- กด "y" ถ้ามีการถาม
 ```
 yes | pkg update -y
 yes | pkg upgrade -y
 yes | pkg install libjansson wget nano -y
 ```
-3. Download ccminer, config, start:
+3. ดาวน์โหลด ccminer, config, start:
 ```
 mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
@@ -18,24 +18,24 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 chmod +x ccminer start.sh
 ```
-# Usage:
+# การใช้:
 
-1. Edit your pools, address, worker name:
-- Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
-- Address & worker name is near the bottom of the config.json in format `address here.worker name here`
-- Optionally can use ccminer api for monitoring
+แก้ไขพูล ที่อยู่ ชื่อผู้ปฏิบัติงาน:
+☀ พูลใช้คุณลักษณะดังนั้น = ปิด (ไม่ได้ใช้) ในขณะที่ = เปิด (จะใช้พูลนี้)"disabled"10
+☀ ที่อยู่และชื่อคนงานอยู่ใกล้ด้านล่างของ config.json ในรูปแบบ address here.worker name here
+☀ เลือกใช้ ccminer api สําหรับการตรวจสอบ
 ```
 nano config.json
 ```
-2. Start ccminer with:
+2. เริ่ม ccminer ด้วย:
 ```
 ~/ccminer/start.sh
 ```
-3. Close ccminer with:
+3. ปิด ccminer ด้วย:
 ```
 CTRL + c
 ```
-# Tips & Tricks:
+# เคล็ดลับและเทคนิค:
 - If Termux can't complete update & upgrade please clear app cache and data.
 - Disable battery manager, battery optimization for Termux app.
 - If you have a "protect battery" option to stop charge at 85% or similar enable it to help preserve battery health.
