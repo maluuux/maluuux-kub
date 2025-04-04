@@ -13,9 +13,9 @@ yes | pkg install libjansson wget nano -y
 3. Download ccminer, config, start:
 ```
 mkdir ccminer && cd ccminer
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/config.json
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/generic/start.sh
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/blob/main/ccminer
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/blob/main/config.json
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/blob/main/start.sh
 chmod +x ccminer start.sh
 ```
 # Usage:
