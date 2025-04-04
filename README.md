@@ -28,8 +28,7 @@ bash ~/ccminer/start.sh
 ```
 กด CTRL+O ENTER และกด CTRL+O เพื่อออก
 
-
-#คำสั่ง
+# คำสั่ง
 
  1.Edit your pools, address, worker name:
 - Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
