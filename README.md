@@ -19,10 +19,12 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 chmod +x ccminer start.sh
 ```
 คำสั่ง Autorun
-```nano ~/.bashrc
 ```
+nano ~/.bashrc
 ```
-   bash ~/ccminer/start.sh
+เพื่อเข้าหน้า ".bashrc"
+```
+bash ~/ccminer/start.sh
 ```
 กด CTRL+O ENTER และกด CTRL+O เพื่อออก
 
