@@ -1,14 +1,8 @@
-cat > ~/ccminer/config.json <<EOF
+cat > ~/ccminer/config.json <<'EOF'
 {
   "pools": [
     {
       "url": "stratum+tcp://sg.vipor.net:5040",
-      "user": "RVKoBnxatHeb6NWWtHVWpkPJkZ0uEbPr1m.Y9-2018-00",
+      "user": "RVKoBnxatheb6NWWthVWpkPJkZ0uEbPr1m.Y9-2018-00",
       "pass": "x",
-      "keepalive": true
-    }
-  ],
-  "algo": "verus",
-  "threads": 4
-}
-EOF
+      "keepalive
