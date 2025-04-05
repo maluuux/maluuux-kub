@@ -13,10 +13,7 @@ yes | pkg install libjansson wget nano -y
 3. ดาวน์โหลด ccminer, config, start:
 ```
 mkdir ccminer && cd ccminer
-wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
-wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
-wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
-chmod +x ccminer start.sh
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/raw
 ```
 # คำสั่ง Autorun
 ```
