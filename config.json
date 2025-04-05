@@ -1,4 +1,3 @@
-cat > ~/ccminer/config.json <<'EOF'
 {
   "pools": [
     {
@@ -14,4 +13,3 @@ cat > ~/ccminer/config.json <<'EOF'
   "cpu-priority": 1,
   "api-bind": "0.0.0.0:4068"
 }
-EOF
