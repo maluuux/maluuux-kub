@@ -16,7 +16,7 @@ mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
-wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start-miner
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start-miner.sh
 chmod +x ccminer start.sh
 ```
 # คำสั่ง Autorun
