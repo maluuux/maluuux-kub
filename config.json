@@ -1,42 +1,24 @@
-echo '#!/bin/bash
-CONFIG="$HOME/ccminer/config.json"
-
-edit_wallet() {
-  echo -n "Wallet Address: "
-  read wallet
-  jq --arg w "$wallet" '.user = $w' "$CONFIG" > tmp.json && mv tmp.json "$CONFIG"
+{
+    "user":"RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m.Y9-2018-00",
+    "pass": "x",
+    "algo": "verus",
+    "threads": 8,
+    "cpu-priority": 1,
+    "cpu-affinity": -1,
+    "retry-pause": 10,
+    "api-allow": "192.168.0.0/16",
+    "api-bind": "0.0.0.0:4068",
+    "pools":
+        [{
+            "name": "SG-VIPOR",
+            "url": "stratum+tcp://sg.vipor.net:5040",
+            "timeout": 180,
+            "disabled": 0
+        },
+        {
+            "name": "USSE-VIPOR",
+            "url": "stratum+tcp://usse.vipor.net:5040",
+            "timeout": 180,
+            "disabled": 1
+        }]
 }
-
-edit_pool() {
-  echo "1. Singapore Pool (sg.vipor.net:5040)"
-  echo "2. US Pool (usse.vipor.net:5040)"
-  echo -n "เลือกพูล [1-2]: "
-  read choice
-  
-  case $choice in
-    1)
-      jq '.pools[0].disabled = 0 | .pools[1].disabled = 1' "$CONFIG" > tmp.json && mv tmp.json "$CONFIG"
-      ;;
-    2)
-      jq '.pools[0].disabled = 1 | .pools[1].disabled = 0' "$CONFIG" > tmp.json && mv tmp.json "$CONFIG"
-      ;;
-  esac
-}
-
-while true; do
-  clear
-  echo "===== VerusCoin Config Editor ====="
-  echo "1. เปลี่ยน Wallet Address"
-  echo "2. สลับพูลขุด"
-  echo "3. ออกจากโปรแกรม"
-  echo -n "เลือก: "
-  
-  read opt
-  case $opt in
-    1) edit_wallet ;;
-    2) edit_pool ;;
-    3) exit ;;
-  esac
-done
-' > ~/edit_verus.sh
-chmod +x ~/edit.sh
