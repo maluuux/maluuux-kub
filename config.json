@@ -1,6 +1,5 @@
 {
-    "user": 
-    "RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m.Y9-2018-00",
+    "user":"RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m.Y9-2018-00",
     "pass": "x",
     "algo": "verus",
     "threads": 8,
@@ -8,9 +7,7 @@
     "cpu-affinity": -1,
     "retry-pause": 10,
     "api-allow": "192.168.0.0/16",
-    "api-bind": "0.0.0.0:4068",
-   
-    
+    "api-bind": "0.0.0.0:4068",  
     "pools":
         [{
             "name": "SG-VIPOR",
