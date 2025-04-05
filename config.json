@@ -1,10 +1,14 @@
 {
-    "wallet": {
-    "address": "RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m",
-    "worker_name": "Y9-2018-00"
+    "user":"RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m.Y9-2018-00",
+    "pass": "x",
+    "algo": "verus",
     "threads": 8,
-    "pass": "x",  
-     "pools":
+    "cpu-priority": 1,
+    "cpu-affinity": -1,
+    "retry-pause": 10,
+    "api-allow": "192.168.0.0/16",
+    "api-bind": "0.0.0.0:4068",
+    "pools":
         [{
             "name": "SG-VIPOR",
             "url": "stratum+tcp://sg.vipor.net:5040",
@@ -17,12 +21,4 @@
             "timeout": 180,
             "disabled": 1
         }]
-      
-    "algo": "verus",
-    "cpu-priority": 1,
-    "cpu-affinity": -1,
-    "retry-pause": 10,
-    "api-allow": "192.168.0.0/16",
-    "api-bind": "0.0.0.0:4068",
-   
 }
