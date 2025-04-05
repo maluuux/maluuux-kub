@@ -15,8 +15,8 @@ wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
 echo 'bash ~/ccminer/start.sh' >> ~/.bashrc
-echo 'alias run="bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/run)"' >> ~/.bashrc
-echo 'alias run="bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/dit)"' >> ~/.bashrc
+echo 'alias run='./start.sh'' >> ~/.bashrc
+echo 'alias edit='nano config.json' >> ~/.bashrc
 chmod +x ccminer start.sh
 source ~/.bashrc
 ```
