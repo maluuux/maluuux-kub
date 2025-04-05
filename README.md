@@ -26,8 +26,8 @@ bash ~/ccminer/start.sh
 alias run='./start.sh'
 alias edit='nano config.json'
 ```
--กด CTRL+O ENTER เพื่อบันทึก
--กด CTRL+X เพื่อออก
+- กด "CTRL+O" ENTER เพื่อบันทึก
+- กด "CTRL+X" เพื่อออก
 
 # คำสั่ง
 
