@@ -1,2 +1,2 @@
 #!/bin/bash
-bash <(curl -s https://raw.githubusercontent.com/[username]/[repository]/main/start.sh)
+bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh)
