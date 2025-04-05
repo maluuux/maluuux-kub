@@ -8,7 +8,9 @@
     "cpu-affinity": -1,
     "retry-pause": 10,
     "api-allow": "192.168.0.0/16",
-    "api-bind": "0.0.0.0:4068"
+    "api-bind": "0.0.0.0:4068",
+   
+    
     "pools":
         [{
             "name": "SG-VIPOR",
@@ -21,5 +23,5 @@
             "url": "stratum+tcp://usse.vipor.net:5040",
             "timeout": 180,
             "disabled": 1
-        }], 
+        }] 
 }
