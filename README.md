@@ -3,15 +3,13 @@
 ```
 https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk
 ```
-2. เตรียม Termux ให้พร้อม:
+2. เตรียม Termux ให้พร้อม ดาวน์โหลด ccminer, config, start:
 - กด "y" ถ้ามีการถาม
 ```
 yes | pkg update -y
 yes | pkg upgrade -y
 yes | pkg install libjansson wget nano -y
-```
-3. ดาวน์โหลด ccminer, config, start:
-```
+
 mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
