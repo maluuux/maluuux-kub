@@ -14,7 +14,7 @@ mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
-echo 'alias run="bash <(curl -s https://raw.githubusercontent.com/[username]/[repository]/main/run)"' >> ~/.bashrc
+echo 'alias run="bash <(curl -s https://raw.githubusercontent.com/maluuux/maluuux-kub/main/run)"' >> ~/.bashrc
 source ~/.bashrc
 chmod +x ccminer start.sh
 ```
