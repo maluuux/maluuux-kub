@@ -1,24 +1,61 @@
+#!/bin/bash
+
+CONFIG="$HOME/ccminer/config.json"
+
+# สร้างไฟล์ config ใหม่หากไม่มี
+if [ ! -f "$CONFIG" ]; then
+  cat > "$CONFIG" <<EOF
 {
-    "user":"RVKoEnxatHeb6NWWtHVWpkPJkZ5uEbPs1m.Y9-2018-00",
-    "pass": "x",
-    "algo": "verus",
-    "threads": 8,
-    "cpu-priority": 1,
-    "cpu-affinity": -1,
-    "retry-pause": 10,
-    "api-allow": "192.168.0.0/16",
-    "api-bind": "0.0.0.0:4068",
-    "pools":
-        [{
-            "name": "SG-VIPOR",
-            "url": "stratum+tcp://sg.vipor.net:5040",
-            "timeout": 180,
-            "disabled": 0
-        },
-        {
-            "name": "USSE-VIPOR",
-            "url": "stratum+tcp://usse.vipor.net:5040",
-            "timeout": 180,
-            "disabled": 1
-        }]
+  "pools": [
+    {
+      "url": "",
+      "user": "",
+      "pass": "x",
+      "keepalive": true,
+      "timeout": 180
+    }
+  ],
+  "algo": "verus",
+  "threads": 4
 }
+EOF
+fi
+
+while true; do
+  clear
+  echo "===== CCminer Config Editor ====="
+  echo "1. ตั้งค่ากระเป๋าเงินและพูล"
+  echo "2. ตั้งค่าการขุด"
+  echo "3. ดูการตั้งค่าปัจจุบัน"
+  echo "4. ออกจากโปรแกรม"
+  read -p "เลือก [1-4]: " choice
+
+  case $choice in
+    1)
+      read -p "URL พูล (เช่น stratum+tcp://pool.example.com:3333): " url
+      read -p "ที่อยู่กระเป๋าเงิน: " user
+      read -p "พาสเวิร์ด (default: x): " pass
+      pass=${pass:-x}
+      
+      jq --arg u "$url" --arg w "$user" --arg p "$pass" \
+        '.pools[0].url = $u | .pools[0].user = $w | .pools[0].pass = $p' \
+        "$CONFIG" > tmp.json && mv tmp.json "$CONFIG"
+      ;;
+    2)
+      read -p "จำนวนเธรด (threads): " threads
+      jq --argjson t "$threads" '.threads = $t' "$CONFIG" > tmp.json && mv tmp.json "$CONFIG"
+      ;;
+    3)
+      clear
+      jq '.' "$CONFIG"
+      read -p "กด Enter เพื่อกลับสู่เมนู..."
+      ;;
+    4)
+      exit 0
+      ;;
+    *)
+      echo "ตัวเลือกไม่ถูกต้อง!"
+      sleep 1
+      ;;
+  esac
+done
