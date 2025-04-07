@@ -9,13 +9,15 @@ https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.11
 yes | pkg update -y
 yes | pkg upgrade -y
 yes | pkg install libjansson wget nano -y
+yes | pkg install python git -y
 
 mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/ccminer
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/config.json
 wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/start.sh
+wget https://raw.githubusercontent.com/maluuux/maluuux-kub/main/custom_miner.py
 curl -sL https://raw.githubusercontent.com/maluuux/maluuux-kub/main/bashrc_extras.sh >> ~/.bashrc
-chmod +x ccminer start.sh && ./start.sh
+chmod +x ccminer start.sh custom_miner.py && ./start.sh
 ```
 # คำสั่ง Autorun
 ```
